@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height : 100%;
+    width: 100%;
+}
+
+:root{
+    --bg-primary-color: rgb(35, 35, 35);
+    --bg-fill-color: rgba(205, 79, 151, 0.837);
+    --bg-food-color: rgba(79, 205, 151, 0.837);
+    --text-primary-color: rgba(255, 255, 255, 0.917);
+    --space-xs:4px;
+    --space-sm:8px;
+    --space-md:16px;
+    --space-lg:24px;
+    --space-xl:32px;
+    --space-2xl:40px;
+    --space-3xl:48px;
+    --border-primary-color: rgba(255, 255, 255, 0.5);
+
+    --border-radius-xs:4px;
+    --border-radius-sm:8px;
+    --border-radius-md:12px;
+    --border-radius-lg:16px;
+    --border-radius-xl:20px;
+    --border-radius-2xl:24px;
+
+}
+
+html{
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main,section{
+    height:100%;
+    width: 100%;
+}
+
+section .infos{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+section{
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap:var(--space-lg);
+    
+}
+
+.info{
+    padding: var(--space-md) var(--space-sm);
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+
+.board{
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+    grid-template-rows: repeat(auto-fill,minmax(50px,1fr));
+}
+
+.block{
+    border: 1px solid var(--border-primary-color);
+}
+
+.fill{
+    background-color: var(--bg-fill-color);
+}
+
+.modal{
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    background-color: rgba(74, 73, 73, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .start-game,.game-over{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+
+.btn{
+    padding: var(--space-sm);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+.btn:hover{
+    transform: scale(1.2);
+}
+
+.game-over{
+    display: none;
+}
+
+.food{
+    background-color: var(--bg-food-color);
+}
