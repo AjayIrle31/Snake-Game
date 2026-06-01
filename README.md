@@ -1,4 +1,4 @@
-# Snake Game
+﻿# Snake Game
 
 A classic Snake game built with vanilla HTML, CSS, and JavaScript.
 
@@ -38,7 +38,8 @@ A classic Snake game built with vanilla HTML, CSS, and JavaScript.
 
 ```
 snake-game/
-├── index.html
-├── script.js
-├── style.css
-└── README.md
+├─ index.html
+├─ script.js
+├─ style.css
+└─ README.md
+```
