@@ -123,7 +123,7 @@ let touchStartX=0;
 let touchStartY=0;
 
 
-add EventListener('touchstart',(e) =>{
+addEventListener('touchstart',(e) =>{
     touchStartX = e.touches[0].clientX;
     touchStartY = e.touches[0].clientY;
 }); 
