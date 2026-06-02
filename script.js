@@ -118,3 +118,27 @@ addEventListener('keydown', (event) => {
         case 'ArrowDown':  if (direction !== "up")    direction = "down";  break;
     }
 });
+
+let touchStartX=0;
+let touchStartY=0;
+
+
+add EventListener('touchstart',(e) =>{
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+}); 
+
+addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+        // Horizontal swipe
+        if (dx > 0 && direction !== "left")  direction = "right";
+        else if (dx < 0 && direction !== "right") direction = "left";
+    } else {
+        // Vertical swipe
+        if (dy > 0 && direction !== "up")   direction = "down";
+        else if (dy < 0 && direction !== "down") direction = "up";
+    }
+});
